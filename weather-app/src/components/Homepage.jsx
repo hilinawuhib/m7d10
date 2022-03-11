@@ -72,10 +72,13 @@ function Homepage() {
       </div>
       {typeof weather.main != "undefined" ? (
         <div className="container">
-          <Card style={{ width: "18rem", justifyContent: "center" }}>
+          <Card
+            className="cardcss"
+            style={{ width: "18rem", justifyContent: "center" }}
+          >
             <Card.Body>
               <Card.Title>
-                City: {weather.name}, {weather.sys.country}
+                {weather.name}, {weather.sys.country}
               </Card.Title>
               <Card.Text>
                 latitude: {weather.coord.lat}, longitude:{weather.coord.lon}

@@ -12,7 +12,12 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+* {
+  font-family: "Fredoka", sans-serif;
+  font-family: "League Spartan", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -36,11 +41,16 @@
     transform: rotate(360deg);
   }
 }
-.container{
+.container {
   margin-top: 50px;
-  width: 500px !important;;
-  padding:10px;
+  width: 600px !important;
+  padding: 10px;
   justify-content: center;
   align-items: center;
-  
+}
+.cardcss {
+  padding: 5px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 30px !important;
+  background-color: rgb(217, 238, 231) !important;
 }
