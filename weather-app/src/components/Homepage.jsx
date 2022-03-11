@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Card } from "react-bootstrap";
 
-function Homepage() {
+const Homepage = () => {
   const [query, setQuery] = useState("");
   const [weather, setWeather] = useState({});
   const handleChange = (e) => {
@@ -20,39 +20,6 @@ function Homepage() {
     } else {
       console.log("error");
     }
-  };
-
-  const dates = (d) => {
-    let months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    let days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-
-    let day = days[d.getDay()];
-    let date = d.getDate();
-    let month = months[d.getMonth()];
-    let year = d.getFullYear();
-
-    return `${day} ${date} ${month} ${year}`;
   };
 
   return (
@@ -81,12 +48,10 @@ function Homepage() {
                 {weather.name}, {weather.sys.country}
               </Card.Title>
               <Card.Text>
-                latitude: {weather.coord.lat}, longitude:{weather.coord.lon}
+                Latitude: {weather.coord.lat}, Longitude:{weather.coord.lon}
               </Card.Text>
-              <Card.Text>
-                Temprature:{weather.main.temp}°c,feels like:
-                {weather.main.feels_like}
-              </Card.Text>
+              <Card.Text>Temprature:{weather.main.temp}°c</Card.Text>
+              <Card.Text>feels like:{weather.main.feels_like}°c</Card.Text>
               <Card.Text>Humidity:{weather.main.humidity}°c</Card.Text>
               <Card.Text>{weather.weather[0].main}</Card.Text>
               <Card.Text>
